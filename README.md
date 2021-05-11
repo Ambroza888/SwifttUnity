@@ -41,6 +41,6 @@ Next, you need to create an empty Unity project. It doesn’t matter where it’
 Documentation is pretty well writen, so I will just leave links and we can easy follow it.
 1. We need to download Placenote SDK so we can import it in Unity - Register and sign in [here](https://placenote.com/)
 2. Follow documentation for Download the Unity SDK with Unity Package file [here](https://docs.placenote.com/unity/unity-getting-started/download-the-unity-sdk)
-3. Setting up your Placenote project here[here](https://docs.placenote.com/unity/build-the-sample-apps/build-a-unity-scene)
+3. Setting up your Placenote project [here](https://docs.placenote.com/unity/build-the-sample-apps/build-a-unity-scene)
 ### Connect Unity with iOS
 ### And now... some code!
