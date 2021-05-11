@@ -18,7 +18,7 @@ Just for reference, I am using: Xcode version 12.5, Unity version: 2019.4.26f1
 
     I will create ``DemoSwiftUnityAR`` folder which will be the main folder to store the project in it.
 2. Create Xcode project (To deploy to iOS device you need MacBook).
-![img](images/1.png)
+![img](SwifttUnity/images/1.png)
 3. Select App and then Next.
 4. Choose options for your new project:
 ![](images/2.png)
