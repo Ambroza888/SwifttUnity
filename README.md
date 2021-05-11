@@ -14,8 +14,33 @@ Just for reference, I am using: Xcode version 12.5, Unity version: 2019.4.26f1
  ## Create Unity AR app in Swift iOS App from scratch with Placenote SDK.
  To be able to use Augmented Reality in Unity we have to import 3rd party libary, SDK or plugins in Unity project(ex. Wikitude, Vuforiaand Placenote etc.)
 ### Create the iOS project
+1. First, you need to create an empty iOS project inside a workspace. An easy way to do this is to first create an empty XCode project, and then go to File → Save As Workspace. Let’s name both the project and the workspace SwiftyUnity.
+
+    I will create ``DemoSwiftUnityAR`` folder which will be the main folder to store the project in it.
+2. Create Xcode project (To deploy to iOS device you need MacBook).
+![](images/1.png)
+3. Select App and then Next.
+4. Choose options for your new project:
+![](images/2.png)
+
+    **Important:**
+
+    Make sure you select Storyboard as the Interface and UIKit App Delegate as the project Life Cycle. Don’t worry, we will convert this to a SwiftUI app later on, these steps are needed just to get the Unity integration working.
+
+    Also, since this will be a SwiftUI project, don’t forget to set the minimum iOS deployment target to 13.0.
+5. Choose directory where to create the empty Swift project (in my case I created ``DemoSwiftUnityAR`` in step 1).
+6. Now we need to create workspace, in order to do so we go our freshly created Xcode project File → new → workspace...
+![](images/3.png)
+7. Now in DemoSwiftUnityAR we have to have two items:
+    * SwiftyUnity Folder
+    * SwiftyUnity.xcworkspace file
 ### Create the Unity project
+Next, you need to create an empty Unity project. It doesn’t matter where it’s located, but it’s best to have it in the same folder where our workspace and the iOS project reside. Let’s call the Unity project UnityGame.
+![](images/4.png)
+### Import Placenote SDK in Unity
+Documentation is pretty well writen, so I will just leave links and we can easy follow it.
+1. We need to download Placenote SDK so we can import it in Unity - Register and sign in [here](https://placenote.com/)
+2. Follow documentation for Download the Unity SDK with Unity Package file [here](https://docs.placenote.com/unity/unity-getting-started/download-the-unity-sdk)
+3. Setting up your Placenote project here[here](https://docs.placenote.com/unity/build-the-sample-apps/build-a-unity-scene)
 ### Connect Unity with iOS
 ### And now... some code!
-
-![](Images/1.png)
