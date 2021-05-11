@@ -21,7 +21,7 @@ Just for reference, I am using: Xcode version 12.5, Unity version: 2019.4.26f1
 ![](Images/1.png)
 3. Select App and then Next.
 4. Choose options for your new project:
-![](https://raw.githubusercontent.com/Ambroza888/SwifttUnity/main/Images/2.png)
+![](Images/2.png)
 
     **Important:**
 
@@ -30,13 +30,13 @@ Just for reference, I am using: Xcode version 12.5, Unity version: 2019.4.26f1
     Also, since this will be a SwiftUI project, don’t forget to set the minimum iOS deployment target to 13.0.
 5. Choose directory where to create the empty Swift project (in my case I created ``DemoSwiftUnityAR`` in step 1).
 6. Now we need to create workspace, in order to do so we go our freshly created Xcode project File → new → workspace...
-![](https://raw.githubusercontent.com/Ambroza888/SwifttUnity/main/Images/3.png)
+![](Images/3.png)
 7. Now in DemoSwiftUnityAR we have to have two items:
     * SwiftyUnity Folder
     * SwiftyUnity.xcworkspace file
 ### Create the Unity project
 Next, you need to create an empty Unity project. It doesn’t matter where it’s located, but it’s best to have it in the same folder where our workspace and the iOS project reside. Let’s call the Unity project UnityGame.
-![](https://raw.githubusercontent.com/Ambroza888/SwifttUnity/main/Images/4.png)
+![](Images/4.png)
 ### Import Placenote SDK in Unity
 Documentation is pretty well writen, so I will just leave links and we can easy follow it.
 1. We need to download Placenote SDK so we can import it in Unity - Register and sign in [here](https://placenote.com/)
