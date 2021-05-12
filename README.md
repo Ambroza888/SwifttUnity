@@ -21,10 +21,10 @@ Just for reference, I am using:
 
     I will create ``DemoSwiftUnityAR`` folder which will be the main folder to store the project in it.
 2. Create Xcode project (To deploy to iOS device you need MacBook).
-![img](images/1.png)
+![](Images/1.png)
 3. Select App and then Next.
 4. Choose options for your new project:
-![](images/2.png)
+![](Images/2.png)
 
     **Important:**
 
@@ -33,13 +33,13 @@ Just for reference, I am using:
     Also, since this will be a SwiftUI project, don’t forget to set the minimum iOS deployment target to 13.0.
 5. Choose directory where to create the empty Swift project (in my case I created ``DemoSwiftUnityAR`` in step 1).
 6. Now we need to create workspace, in order to do so we go our freshly created Xcode project File → new → workspace...
-![](images/3.png)
+![](Images/3.png)
 7. Now in DemoSwiftUnityAR we have to have two items:
     * SwiftyUnity Folder
     * SwiftyUnity.xcworkspace file
 ### Create the Unity project
 Next, you need to create an empty Unity project. It doesn’t matter where it’s located, but it’s best to have it in the same folder where our workspace and the iOS project reside. Let’s call the Unity project UnityGame.
-![](images/4.png)
+![](Images/4.png)
 ### Import Placenote SDK in Unity
 Documentation is pretty well writen, so I will just leave links and we can easy follow it.
 1. We need to download Placenote SDK so we can import it in Unity - Register and sign in [here](https://placenote.com/)
