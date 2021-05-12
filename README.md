@@ -232,6 +232,55 @@ Now both SwiftyUnity.xcodeproj and Unity-iPhone.xcodeproj belong to the same wor
         }
     }
     ```
-5. Let’s set up AppDelegate so we can run the app. Open AppDelegate.swift and remove all scene-related functions. We will also need to pass the main app window reference to Unity here since that’s the window we’ll return to once we unload the Unity game.
+    * This is how ***Unity.swift*** should looks like:
+    ![](Images/19.png)
+5. Let’s set up AppDelegate so we can run the app. Open **AppDelegate.swift** and remove all scene-related functions. We will also need to pass the main app window reference to Unity here since that’s the window we’ll return to once we unload the Unity game.
+    * Code to add to **AppDelegate.swift**
+    ```
+    import UIKit
 
-    After these modifications, your AppDelegate should look like this:
+    @main
+    class AppDelegate: UIResponder, UIApplicationDelegate {
+
+        var window: UIWindow?
+
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+            Unity.shared.setHostMainWindow(window)
+
+            return true
+        }
+    }
+    ```
+    * After these modifications, your AppDelegate should look like this:
+    ![](Images/20.png)
+6. Next, we have to launch the game from our **ContentView**.
+We simply need to call the ``Unity.shared.show()`` method from our **Unity** class inside the button listener. This is the result:
+    ![](Images/21.png)
+7. We need to plug our iPhone to our macBook and choose it as target on the top.
+    ![](Images/22.png)
+8. We have to change **Enable Bitcode** to **No**:
+ * **SwiftyUnity → PROJECT → Build Settings → All → Build Options**
+* **Unity-iPhone → PROJECT → Build Settings → All → Build Options**
+* I will put one image but you have to do the same for both projects.
+    ![](Images/24.png)
+9. Next we need to add Placenote framework to our Unity-iPhone project.
+* Go to **Unity-iPhone → TARGETS → Unity-iPhone → General → Frameworks,Libraries, and Embedded Content** and click on the **+**.
+    ![](Images/25.png)
+* Go to **Add Other → Add files → UnityExport → Frameworks → Placenote → Plugins → iOS → Placenote.framework → Open**
+* We have added Placenote.framework to our Unity-iPhone project.
+    ![](Images/26.png)
+10. Next we need to add Placenote framework to our SwiftyUnity project.
+ * Now we go to **SwiftyUnity → TARGETS → SwiftyUnity → Build Phases → Embed Frameworks** and click on **+**.
+ * We go to **Add Other → UnityExport → Frameworks → Placenote → Plugins → iOS → Placenote.framework → **
+ * This is how it should look after is added:
+ ![](Images/27.png)
+
+ 11. After iOS 13 Apple added new privacy policy if you App needs to access camera or microphone etc. For that we will need to add some permission and description to the user.
+
+        1. Go to **SwiftUnity → SwiftyUnity folder → info.plist**
+        2. Click on **Information Property List → +**
+        3.  New field will show and paste that in the field ``NSCameraUsageDescription``, Now we will have field with Key: **Privacy -Camera Usage Description** and empty Value.
+        5.  Add whatever you message you want the user to see in my case "Hello from Valence"
+        6. This is how the info.plist should looks like.
+        ![](Images/28.png)
