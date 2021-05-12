@@ -284,4 +284,4 @@ We simply need to call the ``Unity.shared.show()`` method from our **Unity** cla
         5.  Add whatever you message you want the user to see in my case "Hello from Valence"
         6. This is how the info.plist should looks like.
         ![](Images/28.png)
-12. All Done! Hit the Play button on top left to start deploying you app to iOS device.
+12. All Done!!! Hit the Play button on top left to start deploying you app to iOS device.
